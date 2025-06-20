@@ -1,12 +1,14 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
-    secret: '%env(APP_SECRET)%'
+    http_method_override: true
+    trusted_proxies: ~
 
-    # Note that the session will be started ONLY if you read or write from it.
-    session: true
+    session:
+        cookie_secure: auto
+        cookie_samesite: strict
 
-    #esi: true
-    #fragments: true
+    csrf_protection: true
+
 
 when@test:
     framework:
