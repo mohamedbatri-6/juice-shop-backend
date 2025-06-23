@@ -42,7 +42,7 @@ User : email, password, roles
 
 Product : name, description, price
 
-CartItem : user, product, quantity
+Cart : user, product, quantity
 
 Order : user, products, totalPrice, status
 
